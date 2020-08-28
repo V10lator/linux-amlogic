@@ -33,7 +33,7 @@
 		gpio-miso = <&gpio 88 0>;
 		gpio-sck = <&gpio 90 0>;
 		cs-gpios = <&gpio 89 1>;
-		num-chipseletcs = <1>;
+		num-chipselects = <1>;
 		status = "ok";
 
 		spidev {
