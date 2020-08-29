@@ -39,7 +39,7 @@
 		spidev {
 			compatible = "spidev";
 			reg = <0>;
-			spi-max-frequency = <32000000>;
+			spi-max-frequency = <3200000>;
 		};
 	};
 
