@@ -29,17 +29,18 @@
 		compatible = "spi-gpio";
 		ranges;
 
-		gpio-mosi = <&gpio 87 0>;
-		gpio-miso = <&gpio 88 0>;
-		gpio-sck = <&gpio 90 0>;
-		cs-gpios = <&gpio 89 1>;
+		gpio-mosi = <&gpio GPIOX_8 GPIO_ACTIVE_HIGH>;
+		gpio-miso = <&gpio GPIOX_9 GPIO_ACTIVE_HIGH>;
+		gpio-sck = <&gpio GPIOX_11 GPIO_ACTIVE_HIGH>;
+		cs-gpios = <&gpio GPIOX_10 GPIO_ACTIVE_LOW>;
 		num-chipselects = <1>;
 		status = "ok";
 
-		spidev {
+		spidev@0 {
 			compatible = "spidev";
 			reg = <0>;
-			spi-max-frequency = <3200000>;
+			spi-max-frequency = <32000000>;
+			status = "okay";
 		};
 	};
 
