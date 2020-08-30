@@ -1,0 +1,21 @@
+/ {
+	/delete-node/ pcm_dai;
+
+	spi {
+		compatible = "spi-gpio";
+		ranges;
+
+		gpio-mosi = <&gpio 87 0>;
+		gpio-miso = <&gpio 88 0>;
+		gpio-sck = <&gpio 90 0>;
+		cs-gpios = <&gpio 89 1>;
+		num-chipseletcs = <1>;
+		status = "ok";
+
+		spidev {
+			compatible = "spidev";
+			reg = <0>;
+			spi-max-frequency = <32000000>;
+		};
+	};
+};
