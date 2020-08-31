@@ -10,7 +10,7 @@
 		gpio-miso = <&gpio GPIOX_9 GPIO_ACTIVE_HIGH>;
 		gpio-sck = <&gpio GPIOX_11 GPIO_ACTIVE_HIGH>;
 		cs-gpios = <&gpio GPIOX_10 GPIO_ACTIVE_LOW>;
-		num-chipselects = <0>;
+		num-chipselects = <1>;
 		status = "ok";
 
 		spidev@0 {
