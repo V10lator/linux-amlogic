@@ -1,5 +1,6 @@
 #include "gxl_p212_2g.dts"
 #include "lepotato.dtsi"
+#include "lepotato_SPI.dts"
 
 /{
 	coreelec-dt-id = "gxl_p212_2g_lepotato";

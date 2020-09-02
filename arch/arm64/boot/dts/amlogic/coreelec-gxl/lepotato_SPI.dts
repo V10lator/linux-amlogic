@@ -1,21 +1,37 @@
 / {
 	/delete-node/ pcm_dai;
 
-	spi {
-		compatible = "spi-gpio";
-		ranges;
-
-		gpio-mosi = <&gpio 87 0>;
-		gpio-miso = <&gpio 88 0>;
-		gpio-sck = <&gpio 90 0>;
-		cs-gpios = <&gpio 89 1>;
-		num-chipseletcs = <1>;
+	spicc:@c1108d80{
+		compatible = "amlogic, spicc";
 		status = "ok";
 
-		spidev {
-			compatible = "spidev";
-			reg = <0>;
+		reg = <0x0 0xc1108d80 0x0 0x28>;
+		clocks = <&clkc CLKID_SPICC>;
+		clock-names = "spicc_clk";
+		interrupts = <0 81 1>;
+		device_id = <0>;
+
+		pinctrl-names = "spicc_pulldown","spicc_pullup";
+		pinctrl-0 = <&spicc_pulldown_x8x9x11>;
+		pinctrl-1 = <&spicc_pullup_x8x9x11>;
+
+		num_chipselect = <1>;
+		cs-gpios = <&gpio GPIOX_10 GPIO_ACTIVE_HIGH>;
+
+		dma_en = <0>;
+		dma_tx_threshold = <3>;
+		dma_rx_threshold = <3>;
+		dma_num_per_read_burst = <3>;
+		dma_num_per_write_burst = <3>;
+		delay_control = <0x15>;
+		ssctl = <0>;
+
+		spidev@0 {
+			status = "okay";
+
+			compatible = "linux,spidev";
 			spi-max-frequency = <32000000>;
+			reg = <0>;
 		};
 	};
 };
