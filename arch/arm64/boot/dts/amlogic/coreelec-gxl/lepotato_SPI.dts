@@ -24,7 +24,6 @@
 			#size-cells = <0>;
 			spi-max-frequency = <32000000>;
 			status = "okay";
-			bus_num = <1>;
 		};
 	};
 };
