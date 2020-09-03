@@ -2,8 +2,8 @@
 	/delete-node/ pcm_dai;
 	/delete-node/ lcd;
 	/delete-node/ sd_emmc_a;
-	/delete-node/ sd_emmc_b2
-	/delete-node/ sd_emmc_b1
+	/delete-node/ sd_emmc_b2;
+	/delete-node/ sd_emmc_b1;
 
 	spi0{
 		compatible = "spi-gpio";
