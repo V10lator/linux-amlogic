@@ -1,9 +1,15 @@
 / {
 	/delete-node/ pcm_dai;
+	/delete-node/ aml_sound_meson;
+	/delete-node/ dmic;
+	/delete-node/ spdif_dai;
+	/delete-node/ i2s_dai;
 	/delete-node/ lcd;
 	/delete-node/ sd_emmc_a;
 	/delete-node/ sd_emmc_b2;
 	/delete-node/ sd_emmc_b1;
+	/delete-node/ sd_emmc_c;
+	/delete-node/ wifi;
 
 	spi0{
 		compatible = "spi-gpio";
